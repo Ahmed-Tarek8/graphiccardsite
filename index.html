@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050505" />
+  <title>VANTA X90</title>
+  <meta name="description" content="A scroll-controlled graphics card film." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="is-loading">
+  <div class="boot-screen" id="sequenceLoader" aria-live="polite">
+    <div class="boot-outline" aria-hidden="true">LOAD</div>
+    <div class="boot-copy">
+      <small>VANTA X90 / 360 FRAMES</small>
+      <strong id="loaderPercent">000%</strong>
+    </div>
+    <div class="boot-progress"><i id="loaderBar"></i></div>
+  </div>
+
+  <div class="site-shell">
+    <header class="masthead">
+      <a class="wordmark" href="#core" aria-label="Vanta X90 home">
+        <span class="wordmark-slash" aria-hidden="true"></span>
+        <b>VANTA</b>
+        <small>X90</small>
+      </a>
+
+      <div class="chapter-readout" aria-label="Current scene">
+        <span id="activeChapter">01</span><small>/03</small>
+      </div>
+    </header>
+
+    <main>
+      <section class="story-section scene-one is-active" id="core" data-index="0">
+        <div class="scene-frame">
+          <canvas class="story-canvas" data-sequence="1" aria-label="Graphics card rotating in a dark chamber"></canvas>
+          <div class="scene-wash wash-one" aria-hidden="true"></div>
+
+          <div class="scene-tab">01</div>
+          <div class="fact fact-top">THREE FANS</div>
+          <div class="fact fact-side">BLACK ALLOY</div>
+
+          <div class="type-composition title-cold" aria-hidden="true">
+            <span class="type-ghost">COLD</span>
+            <strong>COLD<span>.</span></strong>
+          </div>
+
+          <div class="split-rule" aria-hidden="true"></div>
+          <div class="scroll-command" id="scrollCue" aria-hidden="true"><span>SCROLL</span><i></i></div>
+          <div class="section-progress"><i></i></div>
+        </div>
+      </section>
+
+      <section class="story-section scene-two" id="integrate" data-index="1">
+        <div class="scene-frame">
+          <canvas class="story-canvas" data-sequence="2" aria-label="Graphics card connecting into a computer system"></canvas>
+          <div class="scene-wash wash-two" aria-hidden="true"></div>
+
+          <div class="scene-tab tab-right">02</div>
+          <div class="contact-label contact-a">CARD</div>
+          <div class="contact-label contact-b">BOARD</div>
+          <div class="contact-line" aria-hidden="true"></div>
+
+          <div class="type-composition title-seated" aria-hidden="true">
+            <span class="type-ghost">SEATED</span>
+            <strong>SEATED<span>.</span></strong>
+          </div>
+
+          <div class="lime-stamp" aria-hidden="true">IN</div>
+          <div class="section-progress"><i></i></div>
+        </div>
+      </section>
+
+      <section class="story-section scene-three final-section" id="output" data-index="2">
+        <div class="scene-frame">
+          <canvas class="story-canvas" data-sequence="3" aria-label="A detailed landscape displayed on a monitor"></canvas>
+          <div class="scene-wash wash-three" aria-hidden="true"></div>
+
+          <div class="scene-tab">03</div>
+          <div class="type-composition title-real" aria-hidden="true">
+            <span class="type-ghost">REAL</span>
+            <strong>REAL<span>?</span></strong>
+          </div>
+
+          <div class="final-actions">
+            <button class="buy-button" id="buyButton" type="button">
+              <span>BUY X90</span><b>↗</b>
+            </button>
+            <button class="again" id="replayButton" type="button">AGAIN <span>↺</span></button>
+          </div>
+          <div class="section-progress"><i></i></div>
+        </div>
+      </section>
+    </main>
+
+    <nav class="sequence-rail" aria-label="Scene navigation">
+      <div class="rail-track"><i id="journeyFill"></i></div>
+      <a class="rail-node active" href="#core" data-index="0"><b>01</b><span>COLD</span></a>
+      <a class="rail-node" href="#integrate" data-index="1"><b>02</b><span>SEATED</span></a>
+      <a class="rail-node" href="#output" data-index="2"><b>03</b><span>REAL?</span></a>
+    </nav>
+
+    <div class="grain" aria-hidden="true"></div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
